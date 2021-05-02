@@ -1,0 +1,148 @@
+Name      CAVIA;			/** ChAracter VIdeo Adapter, monochrome **/
+Partno    ATF1504AS;
+Date      06/December/2020;
+Revision  Release 1.0;
+Designer  Bernardo Kastrup;
+Company   The Byte Attic;
+Assembly  None;
+Location  The Netherlands;
+Device    F1504ISPPLCC44;	/** ATF1504AS-7JX44, with In-System Programmability **/
+
+
+PROPERTY ATMEL {POWER_RESET = OFF};
+PROPERTY ATMEL {PIN_KEEP = ON};
+PROPERTY ATMEL {PREASSIGN = KEEP};
+
+
+/** Provided AS-IS, without guarantees of any kind **/
+/** This is NOT a commercial product as has not been exhaustively tested **/
+
+
+/** Assuming screen has 40x30 characters.						**/
+/** Using a VGA mode with 640x480 pixels and 60Hz timing.			**/
+/** Using squares of 2x2 screen pixels as character pixel.		**/
+/** This solution requires a 25.175MHz oscillator as pixel clock.	**/
+/** Signals are active high, unless stated otherwise.			**/
+
+
+/** The pin assignments below are forced, so the design fits at all.				**/
+/** In the below, each character ID byte in video memory is referred to as a TOKEN.	**/
+/** This way, a "token line" is merely a sequence of 40 characters in video memory,	**/
+/** corresponding to a horizontal line on screen.								**/
+
+/** Inputs **/
+Pin 1 = RST;							/** Resets at the end of each frame, to remain in synch with SCUNK **/
+Pin 43 = CCLK;							/** CAVIA's clock from SCUNK **/
+					
+/** Outputs **/
+Pin [31,21,19,20,18..16,14,6..4] = [VA10..0]; /** Video memory Address **/
+Pin [8,9,12,11] = [LPC3..0];				/** Token Line Passes Counter, 0 to 15 (4 bits) **/
+
+/** Buried states **/
+Pinnode [41..39,37,36,34] = [TLC5..0];		/** Token Line Counter, 0 to 40 (6 bits) **/
+Pinnode [33,29..25,24] = [FBA10..3];		/** Fall-back address to reset video memory addr counter **/
+									/** Only multiples of 40 are relevant, so no need **/
+									/** to use the 3 least significant bits **/
+
+
+/************************/
+/** Token line counter **/
+/************************/
+TLC5.t = TLC4 & TLC3 & TLC2 & TLC1 & TLC0;
+TLC4.t = TLC3 & TLC2 & TLC1 & TLC0;
+TLC3.t = TLC2 & TLC1 & TLC0;
+TLC2.t = TLC1 & TLC0;
+TLC1.t = TLC0;
+TLC0.t = 'b'1;
+[TLC5..0].ck = CCLK;
+[TLC5..0].ar =	RST #
+			(TLC5 & !TLC4 &
+			TLC3 & !TLC2 & !TLC1 & !TLC0);
+/** The above resets token line counter when counter tries to	**/
+/** address beyond highest token line position (address 40)	**/
+
+
+/*********************************************************************/
+/** Token line passes counter: to scan each character line 16 times **/
+/*********************************************************************/
+LPC3.t = LPC2 & LPC1 & LPC0;
+LPC2.t = LPC1 & LPC0;
+LPC1.t = LPC0;
+LPC0.t = 'b'1;
+[LPC3..0].ck = CCLK;
+[LPC3..0].ar = RST;
+[LPC3..0].ce =	TLC5 & !TLC4 &				/** Only count after a token line scan is completed (39) **/
+			!TLC3 & TLC2 & TLC1 & TLC0;
+/** Because this counts from 0 to 15, it 'resets' itself automatically after 16 passes **/
+
+
+/************************************************************/
+/** Video memory Address counter, 11 bits (counts to 1200) **/
+/************************************************************/
+LD = TLC5 & !TLC4 & !TLC3 & TLC2 & TLC1 & TLC0 &
+     !(LPC3 & LPC2 & LPC1 & LPC0);
+/** Above: LoaD fall-back address when final address of token line reached but need to scan it again **/
+
+VA10.t =	 LD  & !FBA10 &  VA10 #
+		 LD  &  FBA10 & !VA10 #
+		!LD  &  VA9 & VA8 & VA7 & VA6 & VA5 & VA4 & VA3 & VA2 & VA1 & VA0;
+
+VA9.t =	 LD  & !FBA9 &  VA9 #
+		 LD  &  FBA9 & !VA9 #
+		!LD  &  VA8 & VA7 & VA6 & VA5 & VA4 & VA3 & VA2 & VA1 & VA0;
+
+VA8.t =	 LD  & !FBA8 &  VA8 #
+		 LD  &  FBA8 & !VA8 #
+		!LD  &  VA7 & VA6 & VA5 & VA4 & VA3 & VA2 & VA1 & VA0;
+
+VA7.t =	 LD  & !FBA7 &  VA7 #
+		 LD  &  FBA7 & !VA7 #
+		!LD  &  VA6 & VA5 & VA4 & VA3 & VA2 & VA1 & VA0;
+
+VA6.t =	 LD  & !FBA6 &  VA6 #
+		 LD  &  FBA6 & !VA6 #
+		!LD  &  VA5 & VA4 & VA3 & VA2 & VA1 & VA0;
+
+VA5.t =	 LD  & !FBA5 &  VA5 #
+		 LD  &  FBA5 & !VA5 #
+		!LD  &  VA4 & VA3 & VA2 & VA1 & VA0;
+
+VA4.t =	 LD  & !FBA4 &  VA4 #
+		 LD  &  FBA4 & !VA4 #
+		!LD  &  VA3 & VA2 & VA1 & VA0;
+
+VA3.t =	 LD  & !FBA3 &  VA3 #
+		 LD  &  FBA3 & !VA3 #
+		!LD  &  VA2 & VA1 & VA0;
+
+VA2.t =	 LD  &  VA2 #				/** 3 least significant bits of FBA are always 0 (0, 40, 80, etc.) **/
+		!LD  &  VA1 & VA0;
+
+VA1.t =	 LD  &  VA1 #				/** 3 least significant bits of FBA are always 0 (0, 40, 80, etc.) **/
+		!LD  &  VA0;
+
+VA0.t =	!LD #					/** 3 least significant bits of FBA are always 0 (0, 40, 80, etc.) **/
+		 LD  &  VA0;
+
+[VA10..0].ck = CCLK;
+[VA10..0].ar =	RST #
+			(VA10 & !VA9 & !VA8 &	/** Asynchronous reset at the end of frame (1200) **/
+			VA7 & !VA6 & VA5 & VA4 &
+			!VA3 & !VA2 & !VA1 & !VA0);
+
+
+/*********************************/
+/** Logic for fall-back address **/
+/*********************************/
+FBA10.d = VA10;
+FBA9.d =  VA9;
+FBA8.d =  VA8;
+FBA7.d =  VA7;
+FBA6.d =  VA6;
+FBA5.d =  VA5;
+FBA4.d =  VA4;
+FBA3.d =  VA3;
+[FBA10..3].ck = CCLK;
+[FBA10..3].ce =	!LPC3 & !LPC2 & !LPC1 & !LPC0 &	/** Latches once per token line, at start of first pass **/
+				!TLC5 & !TLC4 & !TLC3 & !TLC2 & !TLC1 & !TLC0;
+[FBA10..3].ar = RST;
