@@ -1,6 +1,6 @@
 # CERBERUS2080
 CERBERUS 2080™, the amazing multi-processor 8-bit microcomputer: a fully open-source project available for anyone to peruse, build, modify, extend, have fun with, write software for, or commercialize. You owe me nothing but an acknowledgment of original authorship and copyright, should you choose to use it.
-Everything you need to know is in the files <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20Complete%20Manual%20V1.pdf">/CERBERUS 2080 Complete Manual V1.pdf</a>, and <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20BoM%20R1.pdf">/CERBERUS 2080 BoM R1.pdf</a>.
+Everything you need to know is in the files <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20Complete%20Manual%20V1.pdf">/CERBERUS 2080 Complete Manual V1.pdf</a> and <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20BoM%20R1.pdf">/CERBERUS 2080 BoM R1.pdf</a>.
 
 You can follow the entire design and prototyping process of CERBERUS 2080™, with in-depth commentary and explanations of every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 
