@@ -1,0 +1,1 @@
+You will need ATMISP to program the otherwise blank CPLDs in CERBERUS. You will only need WinCUPL if you want to play around with, and change, the design of the circuits mapped onto the 3 CPLDs in CERBERUS.
