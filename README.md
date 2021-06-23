@@ -10,7 +10,7 @@ CERBERUS is being <a href="https://www.homecomputermuseum.nl/en/producten/comput
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 
-CHANGE HISTORY:
+CHANGE HISTORY:<p>
 <b>23 June 2021</b>: BoM updated (the nylon standoffs should be M2, <u>10</u>+6mm, <i>not</i> 12+6mm, as originally stated). The anual has also been updated for convenience and cosmetic reasons, but no change in substance.
 
 ![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/116828792-43c4fe00-aba1-11eb-82e9-53359ee5c066.png)
