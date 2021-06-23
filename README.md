@@ -6,8 +6,6 @@ Everything you need to know is in the files <a href="https://github.com/TheByteA
 
 The official page of the CERBERUS 2080™ project can be found <a href="https://www.thebyteattic.com/p/cerberus-2080.html?view=magazine">here</a>.
 
-CERBERUS is being <a href="https://www.homecomputermuseum.nl/en/producten/computers/cerberus-2080/">sold both as kit and as assembled unit by the Dutch Home Computing Museum</a>, a cultural charity. Buying CERBERUS from them also helps a good, non-profit cause!
-
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 <p><p>
 <B>CHANGE HISTORY</b>:<p>
