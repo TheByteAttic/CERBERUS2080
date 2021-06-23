@@ -9,9 +9,9 @@ The official page of the CERBERUS 2080™ project can be found <a href="https://
 CERBERUS is being <a href="https://www.homecomputermuseum.nl/en/producten/computers/cerberus-2080/">sold both as kit and as assembled unit by the Dutch Home Computing Museum</a>, a cultural charity. Buying CERBERUS from them also helps a good, non-profit cause!
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
-<p>
+<p><p>
 <B>CHANGE HISTORY</b>:<p>
-<b>23 June 2021</b>: BoM updated (the nylon standoffs should be M2, <u>10</u>+6mm, <i>not</i> 12+6mm, as originally stated). The anual has also been updated for convenience and cosmetic reasons, but no change in substance.
+<b>23 June 2021</b>: BoM updated (the nylon standoffs should be M2, <i>10</i>+6mm, <i>not</i> 12+6mm, as originally stated). The anual has also been updated for convenience and cosmetic reasons, but no change in substance.
 
 ![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/116828792-43c4fe00-aba1-11eb-82e9-53359ee5c066.png)
 
