@@ -14,5 +14,5 @@ You can also watch the entire design and build process of CERBERUS 2080™, with
 <B>CHANGE HISTORY</b>:<p>
 <b>02 July 2021</b>: (1) Directory name changed from "CPLD Files" to "CPLD_Files" because CUPL doesn't recognize spaces in directory names. (2) The tabulations of all three .PLD files have been re-formatted for better readability. (3) The buried logic nodes are now left unassigned to pins in CAVIA.PLD and SKUNK.PLD as well, not only in SPACER.PLD. This way, the compiler makes the assignments automatically. The functionality doesn't change at all, but the .PLD files are easier to interpret this way.
 <P>
-<b>23 June 2021</b>: BoM updated (<i>10</i>+6mm nylon standoffs also work, not only 12+6mm, as originally stated). The manual has also been updated for convenience and cosmetic reasons, but no change in substance.
+<b>23 June 2021</b>: (1) BoM updated (<i>10</i>+6mm nylon standoffs also work, not only 12+6mm, as originally stated). (2) The manual has also been updated for convenience and cosmetic reasons, but no change in substance.
 
