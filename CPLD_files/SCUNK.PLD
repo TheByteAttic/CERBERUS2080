@@ -51,7 +51,7 @@ Pinnode = VBPD;                    /** Vertical Back Porch Detector **/
 Pinnode = [H9..0];                 /** Horizontal counter bits, 0 to 800 (10 bits) **/
 Pinnode = [V9..0];                 /** Vertical counter bits, 0 to 525 (10 bits) **/
 Pinnode = [SR7..1];                /** Six most significant bits of shift register **/
-Field ShiftRegister = [SR7..1,RGB];   /** Economical way to refer to shift register as a whole **/
+Field ShiftRegister = [SR7..1, RGB];  /** Economical way to refer to shift register as a whole **/
 Field ShiftOneRight = ['b'0, SR7..1]; /** Handy definition to implement a shift right **/
 
 
