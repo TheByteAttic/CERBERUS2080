@@ -3,7 +3,7 @@
 ![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/116828792-43c4fe00-aba1-11eb-82e9-53359ee5c066.png)
 
 CERBERUS 2080™, the amazing multi-processor 8-bit microcomputer: a fully open-source project available for anyone to peruse, build, modify, extend, have fun with, write software for, or commercialize. You owe me nothing but an acknowledgment of original authorship, should you choose to use it.
-Everything you need to know is in the files <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20Complete%20Manual%20V1.15.pdf">/CERBERUS 2080 Complete Manual V1.1.pdf</a> and <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20BoM%20R1.1.pdf">/CERBERUS 2080 BoM R1.1.pdf</a>.
+Everything you need to know is in the files <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20Complete%20Manual%20V1.15.pdf">/CERBERUS 2080 Complete Manual V1.1.pdf</a> and <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20BoM%20R1.1.pdf">/CERBERUS 2080 BoM R1.1.pdf</a>. (The PDF preview on Github doesn't work well for the manual: it starts repeating pages towards the end of the file. To avoid confusion, you can simple download the PDF file and view it locally.)
 
 <a href="https://github.com/atoone/CERBERUS2080">Andy Toone's fork of this repository</a> contains <a href="https://github.com/atoone/CERBERUS2080/tree/main/CAT">an enhanced BIOS with several extra features handy for game development</a>. Have a look there. HACKADAY has also published <a href="https://hackaday.com/2021/06/08/cerberus-2080-three-headed-retro-computing-project/">an article on CERBERUS</a>.
 
