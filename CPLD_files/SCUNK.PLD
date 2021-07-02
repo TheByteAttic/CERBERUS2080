@@ -14,8 +14,8 @@ PROPERTY ATMEL {PIN_KEEP = ON};
 PROPERTY ATMEL {PREASSIGN = KEEP};
 
 
-/** Provided AS-IS, without guarantees of any kind                       **/
-/** This is NOT a commercial product as has not been exhaustively tested **/
+/** Provided AS-IS, without guarantees of any kind                        **/
+/** This is NOT a commercial product and has not been exhaustively tested **/
 
 
 /** Assuming screen has 40x30 characters.                         **/
