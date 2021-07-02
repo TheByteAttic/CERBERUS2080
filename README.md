@@ -1,4 +1,4 @@
-# CERBERUS2080
+# CERBERUS 2080™
 
 ![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/116828792-43c4fe00-aba1-11eb-82e9-53359ee5c066.png)
 
