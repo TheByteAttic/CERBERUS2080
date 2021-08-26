@@ -9,7 +9,7 @@ You can buy a CERBERUS 2080 kit, with pre-programmed CPLDs and microcontroller, 
 
 Here are links to software ported to CERBERUS and related tooling:
 <ul>
-  <li>Andy Toone has created a suit of online development tools for CERBERUS.</li>
+  <li>Andy Toone has created <a href="https://feertech.com/legion/cerberus.html">a suit of online development tools for CERBERUS</a>.</li>
   <li>Andy's <a href="https://github.com/atoone/CERBERUS2080">fork of this repository</a> also contains <a href="https://github.com/atoone/CERBERUS2080/tree/main/CAT">an enhanced BIOS</a> with several extra features handy for game development.</li>
   <li>Dean Belfield has ported <a href="https://github.com/breakintoprogram/cerberus-bbc-basic">BBC Basic—yes, the Basic interpreter of the magnificent BBC Micro, widely considered the best Basic interpreter of the 80s—to CERBERUS's Z80 CPU</a>. It's fully functional. <a href="https://twitter.com/BreakIntoProg/status/1425071012656435206">Here is an example of what you can do with it</a>. With BBC Basic comes also a native assembler for CERBERUS's Z80.</li>
   <li>Gordon Henderson has been porting his RUBY OS to CERBERUS's 65C02 CPU. With RUBY comes BBC Basic and other applications, but this time running on the 65C02! <a href="https://youtu.be/UjTiY4Wek9s">Here is a sneak preview of what you'll be able to do with it</a>.</li>
