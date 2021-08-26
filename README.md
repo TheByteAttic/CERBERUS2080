@@ -13,8 +13,10 @@ The official page of the CERBERUS 2080™ project can be found <a href="https://
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 <p><p>
-<B>CHANGE HISTORY</b>:<p>
-<b>02 July 2021</b>: (1) Page 41 of the Manual has been updated to inform the user how to pause and step through the CELL application. (2) Github directory name changed from "CPLD Files" to "CPLD_Files" because CUPL doesn't recognize spaces in directory names. (3) The tabulations of all three .PLD files have been re-formatted for better readability. (4) The buried logic nodes are now left unassigned to pins in CAVIA.PLD and SKUNK.PLD as well, not only in SPACER.PLD. This way, the CUPL compiler makes the assignments automatically. The functionality didn't change at all, but the .PLD files are now easier to interpret.
-<P>
-<b>23 June 2021</b>: (1) BoM updated (<i>10</i>+6mm nylon standoffs also work, not only 12+6mm, as originally stated). (2) The Manual has also been updated for convenience and cosmetic reasons, but no change in substance.
+<b>CHANGE HISTORY</b>:
+<ul>
+  <li><b>26 August 2021:</b> SPACER has been updated (from Release 1.1 to Release 1.2) to fix a stability problem associated with the 65C02 CPU (the Z80 remains unaffected). See the change history under the "CPLD_Files" directory for more details. <i>It is recommended that all users and builders of CERBERUS 2080™ adopt R1.2 of SPACER.</i></li>
+  <li><b>02 July 2021</b>: (1) Page 41 of the Manual has been updated to inform the user how to pause and step through the CELL application. (2) Github directory name changed from "CPLD Files" to "CPLD_Files" because CUPL doesn't recognize spaces in directory names. (3) The tabulations of all three .PLD files have been re-formatted for better readability. (4) The buried logic nodes are now left unassigned to pins in CAVIA.PLD and SKUNK.PLD as well, not only in SPACER.PLD. This way, the CUPL compiler makes the assignments automatically. The functionality didn't change at all, but the .PLD files are now easier to interpret.</li>
+  <li><b>23 June 2021</b>: (1) BoM updated (<i>10</i>+6mm nylon standoffs also work, not only 12+6mm, as originally stated). (2) The Manual has also been updated for convenience and cosmetic reasons, but no change in substance.</li>
+</ul>
 
