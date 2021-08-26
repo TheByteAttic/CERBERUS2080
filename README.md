@@ -18,7 +18,7 @@ Here are links to software ported to CERBERUS and related tooling:
 The official page of the CERBERUS 2080™ project can be found <a href="https://www.thebyteattic.com/p/cerberus-2080.html?view=magazine">here</a>.
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
-<p><p>
+<p><p><br>
 <b>CHANGE HISTORY</b>:
 <ul>
   <li><b>26 August 2021:</b> SPACER has been updated (from Release 1.1 to Release 1.2) to fix a stability problem associated with the 65C02 CPU (the Z80 remains unaffected). See change history in the <a href="https://github.com/TheByteAttic/CERBERUS2080/tree/main/CPLD_files">"CPLD_Files" directory</a> for more details. <i>It is recommended that all users and builders of CERBERUS 2080™ adopt R1.2 of SPACER.</i></li>
