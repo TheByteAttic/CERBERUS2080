@@ -9,7 +9,7 @@ Unlike many hobby computers, CERBERUS is a complete system and rock-solid in ter
 
 You can buy a CERBERUS 2080 kit, with pre-programmed CPLDs and microcontroller, from the <a href="https://www.homecomputermuseum.nl/en/winkel/producten/#!/Cerberus-2080/p/377348409/">Home Computer Museum</a>. All you need to do is solder the components, which are all through-hole parts relatively easy to solder. But if you prefer, you can also buy a pre-assembled unit from the museum, using the same link above. In either case, you will be contributing to a registered public-interest nonprofit dedicated to preserving the history of computers, as 100% of the proceeds go to the museum, none to me.
 
-Here are links to software ported to CERBERUS and related tooling:
+Here are links to software developed for, or ported to, CERBERUS and related tooling:
 <ul>
   <li>Andy Toone has created <a href="https://feertech.com/legion/cerberus.html">a suit of online development tools for CERBERUS</a>.</li>
   <li>Andy's <a href="https://github.com/atoone/CERBERUS2080">fork of this repository</a> also contains <a href="https://github.com/atoone/CERBERUS2080/tree/main/CAT">an enhanced BIOS</a> with several extra features handy for game development.</li>
