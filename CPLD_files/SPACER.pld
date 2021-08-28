@@ -178,9 +178,9 @@ RDY6502.ar =  PAUSE6502 # RST;                    /** Promptly halt the 6502 ayn
 /** the 6502's buses have already been re-enabled for at least one clock cycle before the 6502 is actually released    **/
 /** (i.e. by making RDY6502 = 1). This is done by delaying recognition that the buses are enabled (with the DELAY      **/
 /** state). The idea is to prevent the 6502 from trying to access memory before its buses are ready for it. In         **/
-/** addition, the delay state is reset while the 6502 is running (i.e. RDY6502 = 1), so the 6502 can never be released **/
-/** less than 1/2 cycle after being halted, which could otherwise happen due to the asynchronous nature of the RDY6502 **/
-/** reset via PAUSE6502.                                                                                               **/
+/** addition, the delay state has a second job: it is reset while the 6502 is running (i.e. RDY6502 = 1), so the 6502  **/
+/** can never be released less than 1/2 cycle after being halted, which could otherwise happen due to the asynchronous **/
+/** nature of the RDY6502 reset via PAUSE6502.                                                                         **/
 
 NMIB6502   = !(!CPUSLC  &  CPUIRQ);            /** !Interrupt 6502 if it is selected and CAT wants to interrupt it **/
 RST6502    = !(!CPUSLC  &  CPURST);            /** !Reset the 6502 if it is selected and CAT wants to reset it **/
