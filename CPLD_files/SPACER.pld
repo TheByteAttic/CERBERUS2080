@@ -149,7 +149,7 @@ PAUSEZ80  = (!MREQZ80 & RDZ80) & (!VBUSY # !CBUSY); /** Pause Z80 if it's access
 DELAY.d    =  BE6502;         /** DELAY latches the current state of BE6502... **/
 DELAY.ck   = !CLK6502;        /** On the next falling edge of the 6502's clock, creating a one-cycle delay line **/
 DELAY.ar   =  RDY6502 # RST;  /** The delay line is reset when the 6502 is released (i.e. RDY6502 = 1), so to... **/
-                              /** maintain synch with RDY6502, since the latter can be reset asynchronously by PAUSE6502 **/
+                              /** maintain synch with RDY6502 **/
 
 BE6502.d   = !((CPUSLC # !CPUGO) & !RDY6502);  /** Disable 6502's buses if 6502 is not selected or not GO, provided... **/
                                                /** ...that the 6502 is already halted. Otherwise enable them. **/
