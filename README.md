@@ -21,7 +21,6 @@ The official page of the CERBERUS 2080™ project can be found <a href="https://
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 
-<b><i>A NEW VERSION OF CERBERUS 2080's BOARD IS SCHEDULED FOR RELEASE EARLY IN SEPTEMBER 2021. IF YOU PLAN TO BUILD YOURSELF A CERBERUS, IT MAY BE WORTHWHILE TO WAIT A FEW MORE DAYS.</b></i>
 <p><br>
 <b>CHANGE HISTORY</b>:
 <ul>
