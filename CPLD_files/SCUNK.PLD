@@ -1,0 +1,240 @@
+Name      SCUNK;            /** SCan coUNter clocK, monochrome **/
+Partno    ATF1508AS;
+Date      24/August/2021;
+Revision  Release 1.2;
+Designer  Bernardo Kastrup;
+Company   The Byte Attic;
+Assembly  None;
+Location  The Netherlands;
+Device    F1508ISPPLCC84;   /** ATF1508AS-10JU84, with In-System Programmability **/
+
+
+PROPERTY ATMEL {POWER_RESET = OFF};
+PROPERTY ATMEL {PIN_KEEP = ON};
+PROPERTY ATMEL {PREASSIGN = KEEP};
+
+
+/** Provided AS-IS, without guarantees of any kind                        **/
+/** This is NOT a commercial product and has not been exhaustively tested **/
+
+
+/** Assuming screen has 40x30 characters.                         **/
+/** Using a VGA mode with 640x480 pixels and 60Hz timing.         **/
+/** Using squares of 2x2 screen pixels as character pixel.        **/
+/** This solution requires a 25.175MHz oscillator as pixel clock. **/
+/** Signals are active high, unless stated otherwise.             **/
+
+
+/** Inputs **/
+Pin 1 = RST;                       /** External, global reset **/
+Pin 83 = PCLK;                     /** Pixel clock (PCLK) from external oscillator **/
+Pin [63,61,60,58..54] = [CB0..7];  /** Character Byte from character memory **/
+Field CharByteMirrored = [CB0..7]; /** Mirroring input to shift register **/
+
+/** Outputs **/
+Pin 12 = BE;                       /** Buffer Enable, to enable PCLK only after power-on reset **/	
+Pin 27 = HSP;                      /** Horizontal sync pulse, active low **/
+Pin 25 = VSP;                      /** Vertical sync pulse, active low **/
+Pin 24 = RGB;                      /** VGA color signal (white is high) **/
+                                   /** This is also the least significant bit of the shift register **/
+Pin 81 = CCLK;                     /** CAVIA's clock: only ticks during frame, and then divided by 16 **/
+Pin 51 = DPMCE;                    /** Chip Enable for the Dual-Ported Memories **/
+Pin 52 = CRST;                     /** Reset for CAVIA, for synchronization of the counters in CAVIA and SCUNK **/
+
+/** Buried states **/
+Pinnode = HFPD;                    /** Horizontal Front Porch Detector **/
+Pinnode = HSPD;                    /** Horizontal Sync Pulse Detector **/
+Pinnode = HBPD;                    /** Horizontal Back Porch Detector **/
+Pinnode = VFPD;                    /** Vertical Front Porch Detector **/
+Pinnode = VSPD;                    /** Vertical Sync Pulse Detector **/
+Pinnode = VBPD;                    /** Vertical Back Porch Detector **/
+Pinnode = [H9..0];                 /** Horizontal counter bits, 0 to 800 (10 bits) **/
+Pinnode = [V9..0];                 /** Vertical counter bits, 0 to 525 (10 bits) **/
+Pinnode = [SR7..1];                /** Six most significant bits of shift register **/
+Pinnode = [S3..0];                 /** 4-bit counter to divide PCLK by 16 (8 bytes per character) **/
+                                   /** Exposing these states to pinout to facilitate debugging **/
+Field ShiftRegister = [SR7..1, RGB];  /** Economical way to refer to shift register as a whole **/
+Field ShiftOneRight = ['b'0, SR7..1]; /** Handy definition to implement a shift right **/
+
+
+/**********************************************************************************************/
+/** Enable the buffer (74HC244) so to let the clocks tic only after some initialization time **/
+/**********************************************************************************************/
+BE = 'b'1;
+
+
+/****************************************************************************************/
+/** Enable the DP memories whenever NOT in a blanking interval, horizontal or vertical **/
+/****************************************************************************************/
+DPMCE = !(!HFPD & !HSPD & !HBPD & !VFPD & !VSPD & !VBPD);  /** Chip Enable is active low **/
+
+
+/***********************/
+/** CAVIA Reset logic **/
+/***********************/
+CRST =  V9 & !V8 &               /** End of each frame (525 lines) **/
+       !V7 & !V6 & !V5 & !V4 &
+        V3 & V2 & !V1 & V0;
+/** Above: Reset CAVIA's counters at the end of each frame to maintain **/
+/** synch regardless of initialization **/
+
+
+/*********************/
+/** Clock circuitry **/
+/*********************/
+/** Using a counter made of toggle flip-flops as clock divider **/
+S3.t = S2 & S1 & S0;
+S2.t = S1 & S0;
+S1.t = S0;
+S0.t = 'b'1;
+[S3..0].ck = PCLK;
+[S3..0].ar = RST;
+[S3..0].ce = !HFPD & !HSPD & !HBPD & !VFPD & !VSPD & !VBPD; /** This should only tic in frame, **/
+                                                            /** i.e. outside the blanking intervals **/
+CCLK = !S3 & !S2 & S1 & !S0; /** CAVIA's clock is 1/16th of pixel clock. **/
+                             /** This allows CAVIA to scan each of the 8 bytes in the character **/
+                             /** twice, so to fill the frame. **/
+
+
+/*************************************************/
+/** Horizontal counter, 10 bits (counts to 800) **/
+/*************************************************/
+H9.t =  H8 & H7 & H6 & H5 & H4 & H3 & H2 & H1 & H0;
+H8.t =  H7 & H6 & H5 & H4 & H3 & H2 & H1 & H0;
+H7.t =  H6 & H5 & H4 & H3 & H2 & H1 & H0;
+H6.t =  H5 & H4 & H3 & H2 & H1 & H0;
+H5.t =  H4 & H3 & H2 & H1 & H0;
+H4.t =  H3 & H2 & H1 & H0;
+H3.t =  H2 & H1 & H0;
+H2.t =  H1 & H0;
+H1.t =  H0;
+H0.t = 'b'1;
+[H9..0].ck = PCLK;
+[H9..0].ar = RST #
+             ( H9 & H8 &              /** Reset counter at the end of the line (800) **/
+              !H7 & !H6 & H5 & !H4 &
+              !H3 & !H2 & !H1 & !H0);
+
+
+/*************************************/
+/** Horizontal Front porch detector **/
+/*************************************/
+HFPD.d = 'b'1;                        /** When latched, this 1 indicates we are in the front porch **/
+HFPD.ck =  H9 & !H8 &                 /** Latch 1 only at the end of the frame (640) **/
+           H7 & !H6 & !H5 & !H4 &
+          !H3 & !H2 & !H1 & !H0;
+HFPD.ar = RST #
+          ( H9 & !H8 &	              /** Reset at the end of the front porch (656) **/
+            H7 & !H6 & !H5 & H4 &
+           !H3 & !H2 & !H1 & !H0);
+
+
+/************************************/
+/** Horizontal Sync pulse detector **/
+/************************************/
+HSPD.d = 'b'1;                        /** When latched, this 1 indicates we are in the sync pulse **/
+HSPD.ck =  H9 & !H8 &                 /** Latch 1 only at the end of the front porch (656) **/
+           H7 & !H6 & !H5 & H4 &
+          !H3 & !H2 & !H1 & !H0;
+HSPD.ar = RST #
+          ( H9 & !H8 &                /** Reset at the end of the sync pulse (752) **/
+            H7 & H6 & H5 & H4 &
+           !H3 & !H2 & !H1 & !H0);
+
+
+/************************************/
+/** Horizontal Back porch detector **/
+/************************************/
+HBPD.d = 'b'1;                        /** When latched, this 1 indicates we are in the back porch **/
+HBPD.ck =  H9 & !H8 &                 /** Latch 1 only at the end of the sync pulse (752) **/
+           H7 & H6 & H5 & H4 &
+          !H3 & !H2 & !H1 & !H0;
+HBPD.ar =  RST #
+           ( H9 & H8 &                /** Reset at the end of line **/
+            !H7 & !H6 & H5 & !H4 &
+            !H3 & !H2 & !H1 & !H0);
+
+
+/***************************************/
+/** Horizontal sync pulse, active low **/
+/***************************************/
+HSP = !HSPD;                          /** Simply the inverse of the sync pulse detector **/
+
+
+/***********************************************/
+/** Vertical counter, 10 bits (counts to 525) **/
+/***********************************************/
+V9.t =  V8 & V7 & V6 & V5 & V4 & V3 & V2 & V1 & V0;
+V8.t =  V7 & V6 & V5 & V4 & V3 & V2 & V1 & V0;
+V7.t =  V6 & V5 & V4 & V3 & V2 & V1 & V0;
+V6.t =  V5 & V4 & V3 & V2 & V1 & V0;
+V5.t =  V4 & V3 & V2 & V1 & V0;
+V4.t =  V3 & V2 & V1 & V0;
+V3.t =  V2 & V1 & V0;
+V2.t =  V1 & V0;
+V1.t =  V0;
+V0.t = 'b'1;
+[V9..0].ck =  H9 & H8 &               /** Count only upon end of a line (800) **/
+             !H7 & !H6 & H5 & !H4 &
+             !H3 & !H2 & !H1 & !H0;
+[V9..0].ar = RST #
+             ( V9 & !V8 &             /** Reset counter at the end of the frame (525) **/
+              !V7 & !V6 & !V5 & !V4 &
+               V3 & V2 & !V1 & V0);
+
+
+/***********************************/
+/** Vertical Front porch detector **/
+/***********************************/
+VFPD.d = 'b'1;                        /** When latched, this 1 indicates we are in the front porch **/
+VFPD.ck = !V9 & V8 &                  /** Latch 1 at the end of the right margin (480) **/
+           V7 & V6 & V5 & !V4 &
+          !V3 & !V2 & !V1 & !V0;
+VFPD.ar = RST #
+          (!V9 & V8 &                 /** Reset at the end of the front porch (490) **/
+            V7 & V6 & V5 & !V4 &
+            V3 & !V2 & V1 & !V0);
+
+
+/**********************************/
+/** Vertical Sync pulse detector **/
+/**********************************/
+VSPD.d = 'b'1;                        /** When latched, this 1 indicates we are in the sync pulse **/
+VSPD.ck = !V9 & V8 &                  /** Latch 1 at the end of the front porch (490) **/
+           V7 & V6 & V5 & !V4 &
+           V3 & !V2 & V1 & !V0;
+VSPD.ar = RST #
+          (!V9 & V8 &                 /** Reset at the end of the sync pulse (492) **/
+            V7 & V6 & V5 & !V4 &
+            V3 & V2 & !V1 & !V0);
+
+
+/**********************************/
+/** Vertical Back Porch Detector **/
+/**********************************/
+VBPD.d = 'b'1;                        /** When latched, this 1 indicates we are in the back porch **/
+VBPD.ck = !V9 & V8 &                  /** Latch 1 at the end of the sync pulse (492) **/
+           V7 & V6 & V5 & !V4 &
+           V3 & V2 & !V1 & !V0;
+VBPD.ar = RST #
+          ( V9 & !V8 &                /** Reset at the end of the line (525) **/
+           !V7 & !V6 & !V5 & !V4 &
+            V3 & V2 & !V1 & V0);
+
+
+/*************************************/
+/** Vertical sync pulse, active low **/
+/*************************************/
+VSP = !VSPD;                          /** Simply the inverse of the sync pulse detector **/
+
+
+/**************************************************/
+/** Parallel-input, serial-output Shift Register **/
+/**************************************************/
+ShiftRegister.ck = S0;                /** Taking this bit as clock halves PCLK frequency **/
+ShiftRegister.d = (!S3 & !S2 & !S1) & CharByteMirrored # /** Loads in the new byte, flipped **/
+                 !(!S3 & !S2 & !S1) & ShiftOneRight;     /** Otherwise shifts the contents **/
+ShiftRegister.ar = RST #
+                   ( H9 & !H8 &             /** Reset at the end of each frame line, **/
+                     H7 & !H6 & !H5 & !H4 & /** so not to have a signal during the blanking interval **/
+                    !H3 & !H2 & !H1 & !H0);
