@@ -1,4 +1,4 @@
-These are the EasyEDA (https://easyeda.com/) design source files of CERBERUS 2080™. In the EasyEDA editor, click the document icon on the top bar: Document -> Open -> EasyEDA Source, select the json file, then open it in the editor.
+These are the EasyEDA (https://easyeda.com/) design source files of CERBERUS 2080™. In the EasyEDA editor, click the document icon on the top bar: Document -> Open -> EasyEDA Source, select the json file, then open it in the editor. The zip file above is redundant.
 <p><br>
 <b>CHANGE HISTORY:</b>
 <ul>
