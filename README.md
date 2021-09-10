@@ -1,6 +1,6 @@
 # CERBERUS 2080™
 
-![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/116828792-43c4fe00-aba1-11eb-82e9-53359ee5c066.png)
+![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/132910332-99b613a7-59f6-43e4-bc10-2f416d8c7e18.png)
 
 CERBERUS 2080™ is an amazing multi-processor 8-bit microcomputer: a fully open-source project available for anyone to peruse, build, modify, extend, have fun with, write software for, or commercialize. You owe me nothing but an acknowledgment of original authorship, should you choose to use it.
 Everything you need to know is in the files <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20Complete%20Manual.pdf">/CERBERUS 2080 Complete Manual.pdf</a> and <a href="https://github.com/TheByteAttic/CERBERUS2080/blob/main/CERBERUS%202080%20BoM.pdf">/CERBERUS 2080 BoM.pdf</a> (The PDF preview on Github isn't reliable, so you should simply download the PDF file and view it locally). The <a href="https://oshwlab.com/bkastrup/cerberus-2080">entire project is available for immediate use at Oshwlab</a>. There is also a <a href="https://www.facebook.com/groups/cerberus2080">Facebook Group dedicated to all things CERBERUS, particularly software development for it</a>. And HACKADAY has published <a href="https://hackaday.com/2021/06/08/cerberus-2080-three-headed-retro-computing-project/">an article on CERBERUS</a>.
@@ -18,9 +18,10 @@ Here are links to software developed for, or ported to, CERBERUS and related too
 </ul>
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
-
-<p><br>
+<p>
+<hr>
 <b>CHANGE HISTORY</b>:
+<p>
 <ul>
   <li><b>9 September 2021:</b> Schematics, PCB and SCUNK updated to Release 1.2 (probably the final release of CERBERUS). See change history in the respective directories of this repository.</li>
   <li><b>26 August 2021:</b> SPACER has been updated (from Release 1.1 to Release 1.2) to eliminate a stability vulnerability associated with the 65C02 CPU (the Z80 remains unaffected). See change history in the <a href="https://github.com/TheByteAttic/CERBERUS2080/tree/main/CPLD_files">"CPLD_Files" directory</a> for more details. <i>It is recommended that all users and builders of CERBERUS 2080™ adopt R1.2 of SPACER.</i></li>
