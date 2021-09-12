@@ -13,8 +13,9 @@ Here are links to software developed for, or ported to, CERBERUS and related too
 <ul>
   <li>Andy Toone has created <a href="https://feertech.com/legion/cerberus.html">a suit of online development tools for CERBERUS</a>.</li>
   <li>Andy's <a href="https://github.com/atoone/CERBERUS2080">fork of this repository</a> also contains <a href="https://github.com/atoone/CERBERUS2080/tree/main/CAT">an enhanced BIOS</a> with several extra features handy for game development.</li>
+  <li>Andy himself used his BIOS to port Manic Miner to CERBERUS. <a href="https://youtu.be/a6IdV5HQMHQ">Here's a sneak preview</a>.
   <li>Dean Belfield has ported <a href="https://github.com/breakintoprogram/cerberus-bbc-basic">BBC Basic—yes, the Basic interpreter of the magnificent BBC Micro, widely considered the best Basic interpreter of the 80s—to CERBERUS's Z80 CPU</a>. It's fully functional. <a href="https://twitter.com/BreakIntoProg/status/1425071012656435206">Here is an example of what you can do with it</a>. With BBC Basic comes also a native assembler for CERBERUS's Z80.</li>
-  <li>Gordon Henderson has been porting his RUBY OS to CERBERUS's 65C02 CPU. With RUBY comes BBC Basic and other applications, but this time running on the 65C02! <a href="https://youtu.be/UjTiY4Wek9s">Here is a sneak preview of what you'll be able to do with it</a>.</li>
+  <li>Gordon Henderson has been porting his RUBY OS to CERBERUS's 65C02 CPU. With RUBY comes BBC Basic and other applications, but this time running on the 65C02! <a href="https://youtu.be/ISMcggpUzUQ">Here is a sneak preview of what you'll be able to do with it</a>.</li>
 </ul>
 
 You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
