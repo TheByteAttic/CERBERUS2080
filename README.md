@@ -16,9 +16,13 @@ Here are links to software developed for, or ported to, CERBERUS and related too
   <li>Andy himself used his BIOS to port Manic Miner to CERBERUS. <a href="https://youtu.be/a6IdV5HQMHQ">Here's a sneak preview</a>.
   <li>Dean Belfield has ported <a href="https://github.com/breakintoprogram/cerberus-bbc-basic">BBC Basic—yes, the Basic interpreter of the magnificent BBC Micro, widely considered the best Basic interpreter of the 80s—to CERBERUS's Z80 CPU</a>. It's fully functional. <a href="https://youtu.be/v0i_49vSIfw">Here is a demonstration of it</a>. With BBC Basic comes also a native assembler for CERBERUS's Z80.</li>
   <li>Gordon Henderson has been porting his <a href="https://project-downloads.drogon.net/cerberus2080/">RUBY OS to CERBERUS's 65C02 CPU</a>. With RUBY comes <a href="https://project-downloads.drogon.net/cerberus2080/sdCard/">BBC Basic and other applications</a>, but this time running on the 65C02! Here is <a href="https://youtu.be/ISMcggpUzUQ">a demonstration of what you can do with it</a>.</li>
+  <li>Alexandre Dumont has ported <a href="https://github.com/adumont/cerberus2080/releases">FORTH, the procedural, stack-oriented programming language, to CERBERUS, and developed a convenient BIOS</a>.</li>
+  <li>Paul Robson has developed another <a href ="https://github.com/paulscottrobson/cerberus-2080">emulator for CERBERUS, supporting both CPUs</a>.</li>
 </ul>
 
-You can also watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
+And so the list of software developed for, or ported to, CERBERUS keeps on growing!
+
+You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 <p>
 <hr>
 <b>CHANGE HISTORY</b>:
