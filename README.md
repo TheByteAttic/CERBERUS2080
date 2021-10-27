@@ -20,8 +20,6 @@ Here are links to software developed for, or ported to, CERBERUS and related too
   <li>Paul Robson has developed another <a href ="https://github.com/paulscottrobson/cerberus-2080">emulator for CERBERUS, supporting both CPUs</a>.</li>
 </ul>
 
-And so the list of software developed for, or ported to, CERBERUS keeps on growing!
-
 You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic">a series of videos on my YouTube channel</a>.
 <p>
 <hr>
