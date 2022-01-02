@@ -26,6 +26,7 @@ You can watch the entire design and build process of CERBERUS 2080™, with in-d
 <b>CHANGE HISTORY</b>:
 <p>
 <ul>
+  <li><b>2 January 2022:</b> Very minor correction to the total number of 10K Ohm (from 56 to 58) and 220 Ohm (from 1 to 2) resistors required in the BoM.
   <li><b>9 September 2021:</b> Schematics, PCB and SCUNK updated to Release 1.2 (probably the final release of CERBERUS). See change history in the respective directories of this repository.</li>
   <li><b>26 August 2021:</b> SPACER has been updated (from Release 1.1 to Release 1.2) to eliminate a stability vulnerability associated with the 65C02 CPU (the Z80 remains unaffected). See change history in the <a href="https://github.com/TheByteAttic/CERBERUS2080/tree/main/CPLD_files" target="_blank">"CPLD_Files" directory</a> for more details. <i>It is recommended that all users and builders of CERBERUS 2080™ adopt R1.2 of SPACER.</i></li>
   <li><b>02 July 2021</b>: (1) Page 41 of the Manual has been updated to inform the user how to pause and step through the CELL application. (2) Github directory name changed from "CPLD Files" to "CPLD_Files" because CUPL doesn't recognize spaces in directory names. (3) The tabulations of all three .PLD files have been re-formatted for better readability. (4) The buried logic nodes are now left unassigned to pins in CAVIA.PLD and SKUNK.PLD as well, not only in SPACER.PLD. This way, the CUPL compiler makes the assignments automatically. The functionality didn't change at all, but the .PLD files are now easier to interpret.</li>
