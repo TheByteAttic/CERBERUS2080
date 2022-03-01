@@ -18,6 +18,8 @@ Here are links to software developed for, or ported to, CERBERUS and related too
   <li>Gordon Henderson has been porting his <a href="https://project-downloads.drogon.net/cerberus2080/" target="_blank">RUBY OS to CERBERUS's 65C02 CPU</a>. With RUBY comes <a href="https://project-downloads.drogon.net/cerberus2080/sdCard/" target="_blank">BBC Basic and other applications</a>, but this time running on the 65C02! Here is <a href="https://youtu.be/ISMcggpUzUQ" target="_blank">a demonstration of what you can do with it</a>.</li>
   <li>Alexandre Dumont has ported <a href="https://github.com/adumont/cerberus2080/releases" target="_blank">FORTH, the procedural, stack-oriented programming language, to CERBERUS, and developed a convenient BIOS</a>.</li>
   <li>Paul Robson has developed <a href ="https://github.com/paulscottrobson/cerberus-2080" target="_blank">another emulator, supporting both CPUs, and a sprite engine for CERBERUS</a>.</li>
+  <li>Jeroen Venema has ported the puzzle game <a href="https://github.com/envenomator/Sokoban">Sokoban to CERBERUS 2080™</a>.</li>
+  <li>Lennart Benschop has developed <a href="https://lennartb.home.xs4all.nl/basic/cerberus.html">a high-resolution graphics library</a>, usable from within BBC BASIC, which allows for high resolution plots and 3D graphics.</li>
 </ul>
 
 You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic" target="_blank">a series of videos on my YouTube channel</a>.
