@@ -13,16 +13,17 @@ Here are links to software developed for, or ported to, CERBERUS and related too
 <ul>
   <li>Andy Toone has created <a href="https://feertech.com/legion/cerberus.html" target="_blank">a suit of online development tools for CERBERUS</a>.</li>
   <li>Andy's <a href="https://github.com/atoone/CERBERUS2080" target="_blank">fork of this repository</a> also contains <a href="https://github.com/atoone/CERBERUS2080/tree/main/CAT" target="_blank">an enhanced BIOS</a> with several extra features handy for game development.</li>
-  <li>Andy himself used his BIOS to port Manic Miner to CERBERUS. <a href="https://youtu.be/a6IdV5HQMHQ" target="_blank">Here's a sneak preview</a>.
+  <li>Andy himself used his BIOS to port Manic Miner to CERBERUS's W65C02S CPU. <a href="https://youtu.be/a6IdV5HQMHQ" target="_blank">Here's a sneak preview</a>.
   <li>Dean Belfield has ported <a href="https://github.com/breakintoprogram/cerberus-bbc-basic" target="_blank">BBC Basic—yes, the Basic interpreter of the magnificent BBC Micro, widely considered the best Basic interpreter of the 80s—to CERBERUS's Z80 CPU</a>. It's fully functional. <a href="https://youtu.be/v0i_49vSIfw" target="_blank">Here is a demonstration of it</a>. With BBC Basic comes also a native assembler for CERBERUS's Z80.</li>
-  <li>Gordon Henderson has been porting his <a href="https://project-downloads.drogon.net/cerberus2080/" target="_blank">RUBY OS to CERBERUS's 65C02 CPU</a>. With RUBY comes <a href="https://project-downloads.drogon.net/cerberus2080/sdCard/" target="_blank">BBC Basic and other applications</a>, but this time running on the 65C02! Here is <a href="https://youtu.be/ISMcggpUzUQ" target="_blank">a demonstration of what you can do with it</a>.</li>
-  <li>Alexandre Dumont has ported <a href="https://github.com/adumont/cerberus2080/releases" target="_blank">FORTH, the procedural, stack-oriented programming language, to CERBERUS, and developed a convenient BIOS</a>.</li>
+  <li>Gordon Henderson has been porting his <a href="https://project-downloads.drogon.net/cerberus2080/" target="_blank">RUBY OS to CERBERUS's W65C02S CPU</a>. With RUBY comes <a href="https://project-downloads.drogon.net/cerberus2080/sdCard/" target="_blank">BBC Basic and other applications</a>, but this time running on the 65C02! Here is <a href="https://youtu.be/ISMcggpUzUQ" target="_blank">a demonstration of what you can do with it</a>.</li>
+  <li>Alexandre Dumont has ported <a href="https://github.com/adumont/cerberus2080/releases" target="_blank">FORTH, the procedural, stack-oriented programming language, to CERBERUS, and developed a convenient BIOS</a>. This port targets CERBERUS's W65C02S CPU</li>
+  <li>Lennart Benschop has created <a href="https://github.com/lennart-benschop/cerberus-z80-forth/?fbclid=IwAR14ZnuCV1yceHhVIv2ZXmWsYTnMAXNgSUpxxqlP27HyxayD6uh4Ihg0X-Y">another version of FORTH</a>, but this time targeting CERBERUS's Z80 CPU.
   <li>Paul Robson has developed <a href ="https://github.com/paulscottrobson/cerberus-2080" target="_blank">another emulator, supporting both CPUs, and a sprite engine for CERBERUS</a>.</li>
   <li>Jeroen Venema has ported the puzzle game <a href="https://github.com/envenomator/Sokoban">Sokoban to CERBERUS 2080™</a>.</li>
   <li>Lennart Benschop has developed <a href="https://lennartb.home.xs4all.nl/basic/cerberus.html">a high-resolution graphics library</a>, usable from within BBC BASIC, which allows for high resolution plots and 3D graphics.</li>
 </ul>
 
-You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic" target="_blank">a series of videos on my YouTube channel</a>.
+You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic" target="_blank">a series of videos on my YouTube channel</a>. Famous vintage electronics YouTuber Jan Beta has also made <a href="https://youtu.be/YxW3LQ6DE-k">an in-depth video showing how to assembly a CERBERUS kit</a>.
 <p>
 <hr>
 <b>CHANGE HISTORY</b>:
