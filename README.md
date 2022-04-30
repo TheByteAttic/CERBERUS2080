@@ -23,7 +23,7 @@ Here are links to software developed for, or ported to, CERBERUS and related too
   <li>Lennart Benschop has developed <a href="https://lennartb.home.xs4all.nl/basic/cerberus.html">a high-resolution graphics library</a>, usable from within BBC BASIC, which allows for high resolution plots and 3D graphics.</li>
 </ul>
 
-You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic" target="_blank">a series of videos on my YouTube channel</a>. Famous vintage electronics YouTuber Jan Beta has also made <a href="https://youtu.be/YxW3LQ6DE-k">an in-depth video showing how to assembly a CERBERUS kit</a>.
+You can watch the entire design and build process of CERBERUS 2080™, with in-depth commentary and explanations for every design decision, in <a href="https://www.youtube.com/watch?v=1ASspLiE39g&list=PLDf2uklC__d2DAXmF9XuOq_-uNc2M9ITd&ab_channel=TheByteAttic" target="_blank">a series of videos on my YouTube channel</a>. Famous vintage electronics YouTuber Jan Beta has also made <a href="https://youtu.be/YxW3LQ6DE-k">an in-depth video showing how to assemble a CERBERUS kit</a>.
 <p>
 <hr>
 <b>CHANGE HISTORY</b>:
