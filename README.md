@@ -28,7 +28,7 @@ You can watch the entire design and build process of CERBERUS 2080™, with in-d
 <b>CHANGE HISTORY</b>:
 <p>
 <ul>
-  <li><b>30 April 2022:</ab> Minor changes to the manual. On pages 7 and 58, the system architecture diagram was corrected to reflect the fact that CAT cannot talk directly to the data and addresses buses, but only through SPACER. On page 44, a typo was corrected so the address of the non-maskable interrupt service routine of the W65C02S (FCB0) is now correct in the text as well, not only in the memory map diagram.
+  <li><b>30 April 2022:</b> Minor changes to the manual. On pages 7 and 58, the system architecture diagram was corrected to reflect the fact that CAT cannot talk directly to the data and addresses buses, but only through SPACER. On page 44, a typo was corrected so the address of the non-maskable interrupt service routine of the W65C02S (FCB0) is now correct in the text as well, not only in the memory map diagram.
   <li><b>2 January 2022:</b> Very minor correction to the total number of 10K Ohm (from 56 to 58) and 220 Ohm (from 1 to 2) resistors required in the BoM.
   <li><b>9 September 2021:</b> Schematics, PCB and SCUNK updated to Release 1.2 (probably the final release of CERBERUS). See change history in the respective directories of this repository.</li>
   <li><b>26 August 2021:</b> SPACER has been updated (from Release 1.1 to Release 1.2) to eliminate a stability vulnerability associated with the 65C02 CPU (the Z80 remains unaffected). See change history in the <a href="https://github.com/TheByteAttic/CERBERUS2080/tree/main/CPLD_files" target="_blank">"CPLD_Files" directory</a> for more details. <i>It is recommended that all users and builders of CERBERUS 2080™ adopt R1.2 of SPACER.</i></li>
