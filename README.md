@@ -1,9 +1,9 @@
 # CERBERUS 2080™
 
-![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/132910332-99b613a7-59f6-43e4-bc10-2f416d8c7e18.png)
-
-<b><i>IMPORTANT UPDATE</b></i>: After the successful sale of many dozens of units, CERBERUS 2080 is no longer available for sale on the website of the Dutch Home Computer Museum. Due to the IC shortage during the COVID pandemic, the dual-ported memory IC used in CERBERUS 2080 is no longer manufactured in the required DIP package. No reliable stocks are left. A new and backward-compatible CERBERUS design, the <b><a href="https://www.facebook.com/groups/cerberuscomputer/posts/1325767021489211">CERBERUS 2100</a></b>, is being worked on. See illustration below This new design uses only ICs still in production. Once it is released (tentatively during the summer of 2023), a link to a new repository will appear here. In the meantime, please do <i>not</i> order CERBERUS 2080 boards, as you are unlikely to be able to procure the necessary ICs to populate them. This repository is being kept alive purely for legacy reasons.
-
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 img {
   display: block;
@@ -11,6 +11,13 @@ img {
   margin-right: auto;
 }
 </style>
+</head>
+<body>
+  
+![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/132910332-99b613a7-59f6-43e4-bc10-2f416d8c7e18.png)
+
+<b><i>IMPORTANT UPDATE</b></i>: After the successful sale of many dozens of units, CERBERUS 2080 is no longer available for sale on the website of the Dutch Home Computer Museum. Due to the IC shortage during the COVID pandemic, the dual-ported memory IC used in CERBERUS 2080 is no longer manufactured in the required DIP package. No reliable stocks are left. A new and backward-compatible CERBERUS design, the <b><a href="https://www.facebook.com/groups/cerberuscomputer/posts/1325767021489211">CERBERUS 2100</a></b>, is being worked on. See illustration below This new design uses only ICs still in production. Once it is released (tentatively during the summer of 2023), a link to a new repository will appear here. In the meantime, please do <i>not</i> order CERBERUS 2080 boards, as you are unlikely to be able to procure the necessary ICs to populate them. This repository is being kept alive purely for legacy reasons.
+
 <img alt="CERBERUS 2100" src="https://user-images.githubusercontent.com/69539226/232250263-ed8b987b-961a-4c01-88d5-b89a655c9e14.png" style="width:75%;">
 
 <hr>
