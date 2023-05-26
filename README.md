@@ -2,12 +2,8 @@
   
 ![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/132910332-99b613a7-59f6-43e4-bc10-2f416d8c7e18.png)
 
-<b><i>IMPORTANT UPDATE</b></i>: After the successful sale of many dozens of units, CERBERUS 2080 is no longer available for sale on the website of the Dutch Home Computer Museum. Due to the IC shortage during the COVID pandemic, the dual-ported memory IC used in CERBERUS 2080 is no longer manufactured in the required DIP package. No reliable stocks are left. A new and backward-compatible CERBERUS design, the <b><a href="https://www.facebook.com/groups/cerberuscomputer/posts/1325767021489211">CERBERUS 2100</a></b>, is being worked on. See illustration below. This new design uses only ICs still in production. Once it is released (tentatively during the summer of 2023), a link to a new repository will appear here. In the meantime, please do <i>not</i> order CERBERUS 2080 boards, as you are unlikely to be able to procure the necessary ICs to populate them. This repository is being kept alive purely for legacy reasons.
+<b><i>IMPORTANT UPDATE</b></i>: IMPORTANT UPDATE: The Dutch Home Computer museum <a href="https://www.facebook.com/groups/cerberuscomputer/posts/1347529932646253">is offering <i>the last 30-35 original CERBERUS 2080s</i> for sale</a>. No more units can be made, as the DIP dual-ported SRAM chip used as video memory and character memory <i>is no long manufactured,</i> and there are no reliable stocks available anywhere except at the museum (we had a final wafer manufactured for them, for CERBERUS 2080). So if you want an original CERBERUS 2080, this is your last chance. The museum sells both ready-to-use units and kits/parts.<br>
 
-![CERBERUS 2100 3D Screenshot](https://github.com/TheByteAttic/CERBERUS2080/assets/69539226/5b6a552b-52c0-4f43-bda9-0243ce1aa271)
-
-<hr>
-<br>
 CERBERUS 2080™ is an amazing multi-processor 8-bit microcomputer: a fully open-source project available for anyone to peruse, build, modify, extend, have fun with, write software for, or commercialize. You owe me nothing but an acknowledgment of original authorship, should you choose to use it. And yes, CERBERUS has <i>both</i> BASIC <i>and</i> FORTH interpreters available for <i>both</i> of its two CPUs (Z80 and 65C02). Read on for free download links below.
 
 
