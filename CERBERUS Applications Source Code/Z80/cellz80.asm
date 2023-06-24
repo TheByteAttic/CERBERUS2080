@@ -1,4 +1,8 @@
-org $0202
+;; Cell Z80 example adopted for sjasmplus assembler
+  OUTPUT "cellz80.bin"
+  include "cerberus.cfg"
+
+  org ORG
 
   ld b,$28
   ld hl,$8000
