@@ -1,4 +1,4 @@
-# CERBERUS 2080™ (now obsolete)
+# CERBERUS 2080™ (now obsolete and superseded)
 CERBERUS 2080™ has been rendered obsolete and superseded by the new, enhanced, lower-cost <a href="https://github.com/TheByteAttic/CERBERUS2100/tree/main">CERBERUS 2100™</a>. This repository is now maintained purely for legacy reasons. All users are encouraged to migrate to <a href="https://github.com/TheByteAttic/CERBERUS2100/tree/main">CERBERUS 2100™</a> as of now.<br><br>
   
 ![CERBERUS oneslider](https://user-images.githubusercontent.com/69539226/132910332-99b613a7-59f6-43e4-bc10-2f416d8c7e18.png)
