@@ -1,4 +1,6 @@
-* = $0202
+;; CELL for 6502 example adopted for CA65 assembler
+.pc02
+.segment "CODE"
               lda #$80
               sta $01
               sta $03
@@ -6,7 +8,7 @@
               sta $07
               lda #$20
               ldy #$00
-clear         sta $8000,y
+clear:        sta $8000,y
               iny
               cpy #$28
               bne clear
@@ -17,7 +19,7 @@ clear         sta $8000,y
               ldx #$00
               stx $8200
 
-begin         jsr ldchar
+begin:        jsr ldchar
               ldy #$00
               lda #$27
               sta $00
@@ -35,7 +37,7 @@ begin         jsr ldchar
               sta $04
               lda #$02
               sta $06
-automaton     lda ($00),y
+automaton:    lda ($00),y
               clc
               adc ($02),y
               adc ($06),y
@@ -59,7 +61,7 @@ automaton     lda ($00),y
               bne poll
               lda #$00
               sta $8200
-poll          lda $0200
+poll:         lda $0200
               cmp #$01
               bne begin
               lda #$00
@@ -70,9 +72,9 @@ poll          lda $0200
               wai
               jmp begin
 
-ldchar        ldx $8200
+ldchar:       ldx $8200
               ldy #$00
-charloop      lda chars,x
+charloop:     lda chars,x
               sta $f040,y
               inx
               iny
@@ -80,7 +82,7 @@ charloop      lda chars,x
               bne charloop
               rts
 
-eval          ldy #$00
+eval:         ldy #$00
               cmp #$60
               beq isdead
               cmp #$18
@@ -90,12 +92,12 @@ eval          ldy #$00
               lda ($00),y
               cmp #$20
               beq isalive
-isdead        lda #$20
+isdead:       lda #$20
               rts
-isalive       lda #$08
+isalive:      lda #$08
               rts
 
-wrap          lda $8026
+wrap:         lda $8026
               clc
               adc $8027
               adc $8000
@@ -103,9 +105,9 @@ wrap          lda $8026
               sta $804f
               rts
 
-copy          ldx #$28
+copy:         ldx #$28
               ldy #$00
-copyloop      lda $8000,x
+copyloop:     lda $8000,x
               sta $8000,y
               iny
               inx
@@ -115,12 +117,12 @@ copyloop      lda $8000,x
               ldy #$00
               rts
 
-print         lda #$00
+print:        lda #$00
               sta $00
-              lda #$f8
+              lda #>screen
               sta $01
               ldy #$28
-scroll        lda ($00),y
+scroll:       lda ($00),y
               ldy #$00
               sta ($00),y
               ldy #$28
@@ -134,24 +136,24 @@ scroll        lda ($00),y
               lda #$80
               sta $01
               ldx #$00
-printline     lda $8000,x
+printline:    lda $8000,x
               sta $fc88,x
               inx
               cpx #$28
               bne printline
               rts
 
-increment     lda $00
+increment:    lda $00
               cmp #$ff
               beq next
               inc $00
               rts
-next          lda #$00
+next:         lda #$00
               sta $00
               inc $01
               rts
 
-chars
+chars:
 .byte         $00
 .byte         $00
 .byte         $00
@@ -385,3 +387,6 @@ chars
 .byte         $00
 .byte         $00
 .byte         $00
+
+.segment "SCREEN"
+screen:

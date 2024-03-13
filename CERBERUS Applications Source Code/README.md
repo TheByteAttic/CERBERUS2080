@@ -1,1 +1,3 @@
-This directory contains the source files (.asm), corresponding hexadecimal files (.hex) and final binary files (.bin) of a Cellular Automaton application that runs on both of CERBERUS's CPUs (one version per CPU). They illustrate how to go from assembly code to hex, and then to binary, in a way that CERBERUS's simple loader can deal with.
+This directory contains the source files (.asm) and final binary files (.bin) simple applications that runs on both of CERBERUS's CPUs (one version per CPU). 
+
+They illustrate how to go from assembly code to binary, in a way that CERBERUS's simple loader can deal with.
